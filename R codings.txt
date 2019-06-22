@@ -1,0 +1,223 @@
+##Figure 1
+setwd("C:\\Users\\Thinkpad\\Desktop\\尾矿植物-待投稿\\理化参数")
+library(ggpubr)
+library(ggplot2)
+data_barplot<-read.csv("parameter.csv",header=T)
+data_barplot
+p1<-ggboxplot(data_barplot, x="group", y="Sbtot",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Sbtot mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p2<-ggboxplot(data_barplot, x="group", y="Sb1",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Sbexe mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p3<-ggboxplot(data_barplot, x="group", y="Sb2",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Sbsrp mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p4<-ggboxplot(data_barplot, x="group", y="SbIII",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Sb(III) mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p5<-ggboxplot(data_barplot, x="group", y="SbV",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Sb(V) mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p6<-ggboxplot(data_barplot, x="group", y="Astot",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Astot mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p7<-ggboxplot(data_barplot, x="group", y="As1",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Asexe mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p8<-ggboxplot(data_barplot, x="group", y="As2",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Assrp mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p9<-ggboxplot(data_barplot, x="group", y="AsIII",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "As(III) mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p10<-ggboxplot(data_barplot, x="group", y="AsV",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "As(V) mg/kg", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+library(Rmisc)
+multiplot(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,cols=5)
+
+##Figure 2C
+setwd("C:\\Users\\Thinkpad\\Desktop\\尾矿植物-待投稿\\理化参数")
+library(ggpubr)
+library(ggplot2)
+data_barplot<-read.csv("parameter.csv",header=T)
+data_barplot
+p1<-ggboxplot(data_barplot, x="group", y="observedspecies",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Observed species", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p2<-ggboxplot(data_barplot, x="group", y="chao1",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "chao1", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p3<-ggboxplot(data_barplot, x="group", y="shannon",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Shannon", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p4<-ggboxplot(data_barplot, x="group", y="ace",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "ACE", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+library(Rmisc)
+multiplot(p1,p2,p3,p4,cols=4)
+
+
+##Figure 4
+setwd("C:\\Users\\Thinkpad\\Desktop\\尾矿植物-待投稿\\分类水平\\taxnomy")
+library(ggplot2)
+data<-read.csv("phylum.csv",header=T,row.names=1)
+data_rownames<-rownames(data)
+data_colnames<-colnames(data)
+data$phylum<-data_rownames
+data_m<-melt(data,id.vars=c("phylum"))
+data_m$phylum= factor(data_m$phylum, levels=c('Others','Nitrospirae','Gemmatimonadetes','Planctomycetes','Verrucomicrobia','Chloroflexi','Firmicutes','Acidobacteria','Bacteroidetes','Actinobacteria','Proteobacteria'))
+p1<-ggplot(data_m,aes(x=variable,y=value))
+p11<-p1+geom_bar(sta="identity",position=position_stack(1),aes(fill=phylum),width =0.55)+labs(x ="",y ="")+ 
+  theme(axis.title.y=element_text(face="bold", colour="#990000",size=10),
+        axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=0,hjust=0.5,vjust=0.4,size=10,face="bold"),
+        axis.text.y=element_text(size=10,face="bold"),
+        panel.background = element_rect(fill = "transparent",colour = NA),
+        axis.line = element_line(size=0.5, colour = "black"),
+        plot.title = element_text(hjust = 0.5))+scale_fill_brewer(palette="Paired")
+data1<-read.csv("class.csv",header=T,row.names=1)
+data1_rownames<-rownames(data1)
+data1_colnames<-colnames(data1)
+data1$class<-data1_rownames
+data1_m<-melt(data1,id.vars=c("class"))
+data1_m$class= factor(data1_m$class, levels=c('Others','Deltaproteobacteria','Acidobacteria-6','Thermoleophilia','[Saprospirae]','Cytophagia','Bacilli',
+                                              'Actinobacteria','Betaproteobacteria','Gammaproteobacteria','Alphaproteobacteria'))
+p2<-ggplot(data1_m,aes(x=variable,y=value))
+p22<-p2+geom_bar(sta="identity",position=position_stack(1),aes(fill=class),width =0.55)+labs(x ="",y ="")+ 
+  theme(axis.title.y=element_text(face="bold", colour="#990000",size=10),
+        axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=0,hjust=0.5,vjust=0.4,size=10,face="bold"),
+        axis.text.y=element_text(size=10,face="bold"),
+        panel.background = element_rect(fill = "transparent",colour = NA),
+        axis.line = element_line(size=0.5, colour = "black"),
+        plot.title = element_text(hjust = 0.5))+scale_fill_brewer(palette="Paired")
+data2<-read.csv("order.csv",header=T,row.names=1)
+data2_rownames<-rownames(data2)
+data2_colnames<-colnames(data2)
+data2$order<-data2_rownames
+data2_m<-melt(data2,id.vars=c("order"))
+data2_m$order= factor(data2_m$order, levels=c('Others','Alteromonadales','[Saprospirales]','Cytophagales','Pseudomonadales','Xanthomonadales','Rhizobiales',
+                                              'Burkholderiales','Bacillales','Actinomycetales','Sphingomonadales'))
+p3<-ggplot(data2_m,aes(x=variable,y=value))
+p33<-p3+geom_bar(sta="identity",position=position_stack(1),aes(fill=order),width =0.55)+labs(x ="",y ="")+ 
+  theme(axis.title.y=element_text(face="bold", colour="#990000",size=10),
+        axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=0,hjust=0.5,vjust=0.4,size=10,face="bold"),
+        axis.text.y=element_text(size=10,face="bold"),
+        panel.background = element_rect(fill = "transparent",colour = NA),
+        axis.line = element_line(size=0.5, colour = "black"),
+        plot.title = element_text(hjust = 0.5))+scale_fill_brewer(palette="Paired")
+data3<-read.csv("family.csv",header=T,row.names=1)
+data3_rownames<-rownames(data3)
+data3_colnames<-colnames(data3)
+data3$family<-data3_rownames
+data3_m<-melt(data3,id.vars=c("family"))
+data3_m$family= factor(data3_m$family, 
+                       levels=c('Others',
+                                'Sphingobacteriaceae','Sphingomonadaceae','Xanthomonadaceae','Bacillaceae','Pseudomonadaceae','Comamonadaceae','Chitinophagaceae','Hyphomicrobiaceae','Oxalobacteraceae',
+                                'Caulobacteraceae'))
+p4<-ggplot(data3_m,aes(x=variable,y=value))
+p44<-p4+geom_bar(sta="identity",position=position_stack(1),aes(fill=family),width =0.55)+labs(x ="",y ="")+ 
+  theme(axis.title.y=element_text(face="bold", colour="#990000",size=10),
+        axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=0,hjust=0.5,vjust=0.4,size=10,face="bold"),
+        axis.text.y=element_text(size=10,face="bold"),
+        panel.background = element_rect(fill = "transparent",colour = NA),
+        axis.line = element_line(size=0.5, colour = "black"),
+        plot.title = element_text(hjust = 0.5))+scale_fill_brewer(palette="Paired")
+library(Rmisc)
+multiplot(p11,p22,p33,p44,cols=2)
+
+##Figure 7
+#绘制柱状图
+setwd("C:\\Users\\Thinkpad\\Desktop\\尾矿文章写作\\尾矿植物-待投稿-0102\\尾矿植物-待投稿\\RF for WKA\\genera\\genera-new2\\RF")
+library(ggplot2)
+data<-read.csv("genera_environment.csv",header=T)
+library(ggpubr)
+p1<-ggbarplot(data, x="Cellvibrio", y="value1", fill = "blue", color = "white",
+              palette = "aaas", #杂志nature的配色
+              sort.val = "desc", #下降排序“none”, “desc”, “asc”
+              sort.by.groups=FALSE, #不按组排序
+              x.text.angle=60)+labs(x="", y="IncMSE(%)", title="Cellvibrio")
+p2<-ggbarplot(data, x="Cohnella", y="value2", fill = "blue", color = "white",
+              palette = "aaas", #杂志nature的配色
+              sort.val = "desc", #下降排序“none”, “desc”, “asc”
+              sort.by.groups=FALSE, #不按组排序
+              x.text.angle=60)+labs(x="", y="IncMSE(%)", title="Cohnella")
+p3<-ggbarplot(data, x="Devosia", y="value3", fill = "blue", color = "white",
+              palette = "aaas", #杂志nature的配色
+              sort.val = "desc", #下降排序“none”, “desc”, “asc”
+              sort.by.groups=FALSE, #不按组排序
+              x.text.angle=60)+labs(x="", y="IncMSE(%)", title="Devosia")
+p4<-ggbarplot(data, x="Lysobacter", y="value4", fill = "blue", color = "white",
+              palette = "aaas", #杂志nature的配色
+              sort.val = "desc", #下降排序“none”, “desc”, “asc”
+              sort.by.groups=FALSE, #不按组排序
+              x.text.angle=60)+labs(x="", y="IncMSE(%)", title="Lysobacter")
+p5<-ggbarplot(data, x="Flavobacterium", y="value5", fill = "blue", color = "white",
+              palette = "aaas", #杂志nature的配色
+              sort.val = "desc", #下降排序“none”, “desc”, “asc”
+              sort.by.groups=FALSE, #不按组排序
+              x.text.angle=60)+labs(x="", y="IncMSE(%)", title="Flavobacterium")
+library(Rmisc)
+multiplot(p1,p2,p3,p4,p5,cols=2)
+
+
+##Figure S1
+setwd("C:\\Users\\Thinkpad\\Desktop\\尾矿植物-待投稿\\理化参数")
+library(ggpubr)
+library(ggplot2)
+data_barplot<-read.csv("parameter.csv",header=T)
+data_barplot
+p1<-ggboxplot(data_barplot, x="group", y="Ph",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "pH", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p2<-ggboxplot(data_barplot, x="group", y="SO4",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Sulphate (mg/kg)", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p3<-ggboxplot(data_barplot, x="group", y="Totaln",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Total N (%)", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p4<-ggboxplot(data_barplot, x="group", y="Totalc",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Total C (%)", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p5<-ggboxplot(data_barplot, x="group", y="Toc",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "TOC (%)", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p6<-ggboxplot(data_barplot, x="group", y="Totals",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Total S (%)", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p7<-ggboxplot(data_barplot, x="group", y="Totalh",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "Total H (%)", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+p8<-ggboxplot(data_barplot, x="group", y="cn",fill="group",
+               palette = c("#00AFBB", "#E7B800"),
+               add = "jitter")+labs(x ="", y = "C/N", title = "")+guides(fill=FALSE)+
+theme(axis.text.x=element_text(size=7),axis.text.y=element_text(size=7),axis.title.y=element_text(size=7))
+library(Rmisc)
+multiplot(p1,p5,p2,p6,p3,p7,p4,p8,cols=4)
+
+
